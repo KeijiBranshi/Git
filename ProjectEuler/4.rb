@@ -1,5 +1,5 @@
 #Largest palindromic number that is the multiple of two 3-digit numbers
-require '../Ruby/lib/palindrome.rb'
+require './lib/palindrome.rb'
 include Palindrome
 
 @answer = 0
