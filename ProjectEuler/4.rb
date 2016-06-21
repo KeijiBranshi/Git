@@ -2,31 +2,27 @@
 require '../Ruby/lib/palindrome.rb'
 include Palindrome
 
+@answer = 0
+@x = 0
+@y = 0
+
 999.downto(100).each do |i|
-	@answer = 0
-	@found = false
-
 	i.downto(100).each do |j|
-		print (i*j)
-		puts " = #{i} * #{j}"
-		next unless Palindrome::is_palindrome?(i * j)
+		product = i*j
+=begin
+		if product.to_s[0] == product.to_s[product.to_s.length-1]
+			print (product)
+			puts " = #{i} * #{j}"
+		end
+=end
+		next unless Palindrome::is_palindrome?(product)
 
-		@found = true
-		@answer = i*j
-		puts "ANSWER: #{@answer} = #{i} * #{j}"
-		break
-	end
-
-	if @found 
-		break
+		if product > @answer
+			@answer = product
+			@x = i
+			@y = j
+		end
 	end
 end
 
-2895 before
-
-24 per room water sewer trash 
-
-elect internet, gas, A,b,c 100 per month
-
-pay them 24 per month for electricity and plumbing
-we do internet and gas
+puts "ANSWER: #{@answer} = #{@x} * #{@y}"
