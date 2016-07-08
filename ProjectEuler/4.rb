@@ -2,9 +2,9 @@
 require './lib/palindrome.rb'
 include Palindrome
 
-@answer = 0
-@x = 0
-@y = 0
+$answer = 0
+$x = 0
+$y = 0
 
 999.downto(100).each do |i|
 	i.downto(100).each do |j|

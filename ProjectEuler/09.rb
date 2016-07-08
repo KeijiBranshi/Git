@@ -12,9 +12,9 @@ By (1) and (2), we know that a,b,c > 0 (otherwise two within a,b,c could be equa
 
 =end
 
-@a = 0
-@b = 0
-@c = 0
+$a = 0
+$b = 0
+$c = 0
 found = false
 
 (1..996).each do |a|
@@ -24,9 +24,9 @@ found = false
     if (c < a || c < b)
       next
     elsif (a+b+c == 1000)
-      @a = a
-      @b = b
-      @c = c
+      $a = a
+      $b = b
+      $c = c
       found = true
       break
     end
@@ -34,8 +34,8 @@ found = false
   if found then break end
 end
 
-puts ("a=#{@a} b=#{@b} c=#{@c}\n")
-solution = @a * @b * @c
+puts ("a=#{$a} b=#{$b} c=#{$c}\n")
+solution = $a * $b * $c
 p solution
 =begin
 print ("#{@a}^2 = ")
