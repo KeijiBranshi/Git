@@ -2,14 +2,23 @@
 #include <iostream>
 
 int main() {
-  Matrix* mat = new Matrix(2,2);
+  std::cout << "Starting main.cpp" << std::endl;
 
-  for (int i=0; i<row; ++i){
-    for (int j=0; j<col; ++i){
-      if (i==j) mat.set(i,j,1);
-      else mat.set(i,j,0);
+  double array[3][3] =
+  {
+    {5, 8, 1},
+    {3, 9, 2},
+    {0, 6, 7}
+  };
+  Matrix mat(3,3);
+  for (int i=0; i<3; ++i){
+    for (int j=0; j<3; ++j){
+      mat[i][j] = array[i][j];
     }
   }
 
+  Matrix sum = mat + mat;
+
   mat.print();
+  sum.print();
 }
