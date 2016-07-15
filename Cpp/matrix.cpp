@@ -114,9 +114,9 @@ Matrix& Matrix::operator=(const Matrix& other)
 
 Matrix Matrix::operator+(const Matrix& other)
 {
-  if (this->nRow != other.rows() && this->nCol != other.columns()){
-    std::cout << "Invalid Matrix Addition:\n" << "Attempting to add a " <<
-    this->details() << "with a " << other.details();
+  if (this->nRow != other.rows() || this->nCol != other.columns()){
+    std::cout << "Invalid Matrix Addition:\n" << "Attempting to sum a " <<
+    this->details() << "with a " << other.details() << std::endl;
 
     return *this;
   }
@@ -206,7 +206,7 @@ std::string Matrix::details() const
 {
   std::ostringstream oss;
   oss << "[" << this->nRow << "]";
-  oss << " x ";
+  oss << "x";
   oss << "[" << this->nCol << "]";
   oss << " Matrix ";
 
