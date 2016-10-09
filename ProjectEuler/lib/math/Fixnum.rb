@@ -5,8 +5,6 @@ class Fixnum
     quotient == 0 ? [remainder] : [*quotient.digits(base: base), remainder]
   end
 
-  # DONT USE BROKEN: num_digits obtained from http://stackoverflow.com/questions/14005524/how-do-i-determine-the-length-of-a-fixnum-in-ruby
-  def num_digits_10
-    Math.log10(self).to_i + 1
-  end
+  # returns an array with factors of a given number
+  def factors() (1..self).select { |n| (self % n).zero? } end
 end

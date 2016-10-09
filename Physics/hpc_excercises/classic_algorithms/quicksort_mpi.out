@@ -1,0 +1,46 @@
+----------------------------------------
+Begin PBS Prologue Thu Sep 29 10:45:34 PDT 2016
+Job ID:            21639120.hpc-pbs2.hpcc.usc.edu
+Username:          bkhorton
+Group:             csci-ar
+Project:           default
+Name:              quicksort_mpi
+Queue:             quick
+Shared Access:     no
+All Cores:         no
+Has MIC:           no
+Nodes:             hpc0996 hpc2541 
+Scratch is:         /scratch
+TMPDIR:            /tmp/21639120.hpc-pbs2.hpcc.usc.edu
+End PBS Prologue Thu Sep 29 10:45:42 PDT 2016
+----------------------------------------
+Before Sort: Node  3 : 79  86  73  35 
+Before Sort: Node  0 : 28  43  72  79 
+Before Sort: Node  1 : 96  19  17  71 
+Before Sort: Node  2 : 66  67  18  42 
+Before Sort: Node  6 : 81  51  41   4 
+Before Sort: Node  7 : 94  27  93  44 
+Before Sort: Node  4 : 88  32  12  72 
+Before Sort: Node  5 : 45  61  97  41 
+After Sort: Node  2 :  4  18  41  42  51 
+After Sort: Node  0 : 12  28  32  43 
+After Sort: Node  1 : 17  19  41  45 
+After Sort: Node  3 : 27  35  44 
+After Sort: Node  6 : 66  67  81 
+After Sort: Node  5 : 61  71  96  97 
+After Sort: Node  7 : 73  79  86  93  94 
+After Sort: Node  4 : 72  72  79  88 
+----------------------------------------
+Begin PBS Epilogue Thu Sep 29 10:45:46 PDT 2016
+Job ID:           21639120.hpc-pbs2.hpcc.usc.edu
+Username:         bkhorton
+Group:            csci-ar
+Job Name:         quicksort_mpi
+Session:          4503
+Limits:           neednodes=2:ppn=4,nodes=2:ppn=4,walltime=00:00:59
+Resources:        cput=00:00:01,energy_used=0,mem=53092kb,vmem=0kb,walltime=00:00:01
+Queue:            quick
+Shared Access:    no
+Has MIC:          no
+End PBS Epilogue Thu Sep 29 10:46:02 PDT 2016
+----------------------------------------
