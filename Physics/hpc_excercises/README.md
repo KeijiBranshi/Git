@@ -1,0 +1,2 @@
+Here is a collection of parallel programs am I either working on or have finished. Most, if not all, of these programs are meant to run on USC's High Performance Computer. 
+Some programs were assignments in a class, while others were done on my own time. Most of the programs utilize a combination of MPI and OpenMP, so if you wish to run any them on your own computer then you will need those libraries. 
