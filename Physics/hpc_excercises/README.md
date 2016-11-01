@@ -3,13 +3,16 @@ Here is a collection of parallel programs am I either working on or have finishe
 The programs utilize a combination of MPI and OpenMP, and I'm urrently working on one that employs CUDA. If you wish to run any them on your own computer then you will need those libraries.
 
 ##Samples Include:
-* Parallel Quicksort Implementation
+* Parallel Quicksort Implementation:
+
         Uses a sequence of hypercube MPI calls to sort a list of numbers. Built to run on 8 cores.
-* Wavelet Transformation
+* Wavelet Transformation: 
+
         Recursively performs Daubechies wavelet transform on an image, Lenna512x512.pgm, keeping only the smooth 
         components. Theoretically can run on any perfect square number of processors, however, due to compiler issues 
         with the USC High Performance Computer, I hardcoded it to run on 16.
-* Molecular Dynamics
+* Molecular Dynamics:
+
         Currently a bare-bones C# implementation of simple molecular dynamics simulation in a Leonard-Jones potential. 
         The C# code was used in a Data Visualization research project (stored on a private repository due to the nature
         of the research). Translating this to C++ for use on the USC HPC. 
