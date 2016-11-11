@@ -1,30 +1,43 @@
-#define NDIM 2    /* Spacial dimensions of the system */
+/************************************************************************************
+ * 1D Quantum Dynamics using MPI and CUDA
+ * Built off of/modified from from Dr. Nakano's qd1.c code
+ ************************************************************************************/
+
 #define NX 2496    /* Mesh points in x direction */
 #define PIE 3.141592653589793   /* extra 'E' is intentional */
+
 #define RE 0
 #define IE 1
 #define HALF 0
 #define FULL 1
 
+#define T 0
+#define V 1
+#define E 2
+
+#define right 0
+#define left 1
+
 /* MPI Related Variables *************************************************************/
 int nProc;
+int myid;
 MPI_Status status;
 MPI_Request request;
 
 /* Simulation Functions **************************************************************/
 void init_Parameters();
-void init_Propogation();
+void init_Propogators();
 void init_WaveFunction();
 
 void single_Step();
-void potential_Prop_Step();
-void kinetic_Prop_Step(int,int);
+void potential_Propogation();
+void kinetic_Propogation(int);
 
 void periodic_Bounds();
 void calculate_Energy();
 
 /* Input Parameters ******************************************************************/
-double Lx, Ly;      /* Simulation box lengths in the x & y directions */
+double Lx;          /* Simulation box lengths in the x & y directions */
 double deltaTime;   /* Time discretization unit */
 int nStep;          /* Total # of simulation steps */
 int nEnergy;        /* Interval to calculate energies */
@@ -43,6 +56,4 @@ double V[NX+2];
 
 /* Other Variables *******************************************************************/
 double dx;
-double totalT;
-double totalV;
-double totalE;
+double expected[3];
