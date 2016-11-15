@@ -7,7 +7,7 @@ The file, qmd_mpi.c, only uses MPI, while the file, qmd.cu, uses a combination o
 The graph, Kinetic-Potential-Total Energy, plots the time evolution of the system. Time is plotted on the x-axis, while the energy is plotted on the y-axis. The red line represents the potential energy, the blue line represents the kinetic energy, and the green line represents the total energy of the system.
 
 Plot:
-![Kinetic, Potential, Total Energy vs Time][plot]
+![alt text][plot]
 
 
-[logo]: (https://github.com/KeijiBranshi/Git/blob/master/Physics/hpc_excercises/quantum_dynamics/Kinetic-Potential-Total%20Energy.png)
+[plot]: https://github.com/KeijiBranshi/Git/blob/master/Physics/hpc_excercises/quantum_dynamics/Kinetic-Potential-Total%20Energy.png "Kinetic-Potential-Total Energy vs Time"
