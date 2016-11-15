@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l nodes=2:ppn=2,arch=x86_64
+#PBS -l walltime=00:00:59
+#PBS -o qmd_mpi.out
+#PBS -j oe
+#PBS -N qmd_mpi
+WORK_HOME=/home/rcf-proj/csci653/bkhorton/qmd_cuda
+cd $WORK_HOME
+np=$(cat $PBS_NODEFILE | wc -l)
+mpirun -np $np -machinefile $PBS_NODEFILE ./qmd_mpi
